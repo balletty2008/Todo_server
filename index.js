@@ -24,11 +24,17 @@ app.use(express_1.default.urlencoded({ extended: false }));
 // Create connection with Database
 const openDb = () => {
     const pool = new pg_1.Pool({
-        user: 'postgres',
+        /*user: 'postgres',
         host: 'localhost',
         database: 'todo',
         password: 'hahaha',
-        port: 5432
+        port: 5432*/
+        user: 'root',
+        host: 'dpg-cgijga6bb6mnfcqrk52g-a.oregon-postgres.render.com',
+        database: 'todo_03rn',
+        password: '4SBACbNNlonBy51erxe4HBvTN3DUswGJ',
+        port: 5432,
+        ssl: true
     });
     return pool;
 };
